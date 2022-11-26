@@ -1,15 +1,11 @@
 #Module use
-from kivy.app import App 
-
+from kivy.app import App
 #for connecting to the KV File
 from kivy.lang import Builder
-
 #for showing text on screen after clicking button
 from kivy.properties import StringProperty
-
 #for multiple screen
 from kivy.uix.screenmanager import Screen, ScreenManager
-
 #for window configuration & Color
 from kivy.core.window import Window
 

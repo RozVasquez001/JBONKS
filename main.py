@@ -1,50 +1,28 @@
-#Module use
-from kivy.app import App
-#for connecting to the KV File
+from kivy.core.text import LabelBase
+from kivymd.app import MDApp
+from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
-#for showing text on screen after clicking button
-from kivy.properties import StringProperty
-#for multiple screen
-from kivy.uix.screenmanager import Screen, ScreenManager
-#for window configuration & Color
 from kivy.core.window import Window
+from kivy.clock import Clock
 
-#Changing background
-Window.clearcolor = 1,0,0,1
+Window.size = (350,580)
 
-#Configure background
-Window.size = (320 , 480)
+class jbonks(MDApp):
 
-
-#Signup
-class FirstPage(Screen):
-    my_text = StringProperty("")
-
-    def on_press_button(self):
-        self.my_text = "Registration Successfully"
-
-
-
-#Login 
-class SecondPage(Screen):
-    pass
-
-#Homepage
-class ThirdPage(Screen):
-    pass
-
-
-class WindowManager(ScreenManager):
-    pass
-
-
-
-class JBONKS(App):
     def build(self):
-        return kv
+        global screen_manager
+        screen_manager = ScreenManager()
+        screen_manager.add_widget(Builder.load_file("jbonkers.kv"))
+        screen_manager.add_widget(Builder.load_file("login.kv"))
+        return screen_manager
 
-kv = Builder.load_file("JBONKS.kv")
+    def on_start(self):
+        Clock.schedule_once(self.login, 1)
+
+    def login(self, *args):
+        screen_manager.current = "login"
 
 if __name__ == "__main__":
-    JBONKS().run()
+    jbonks().run()
+#now our appp has been created
 

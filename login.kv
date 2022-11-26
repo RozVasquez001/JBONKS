@@ -1,0 +1,114 @@
+MDScreen:
+    name: "login"
+    MDFloatLayout:
+        md_bg_color: 1,1,1,1
+        MDIconButton:
+            icon: "chevron-left"
+            user_font_size: "30sp"
+            pos_hint: {"center_y": .95}
+        MDLabel:
+            text: "Back"
+            font_size: "18sp"
+            font_name: "Fonts/DMSans-Regular.ttf"
+            pos_hint: {"center_x": .615, "center_y": .949}
+            color: 166/255, 19/255, 19/255, 1
+        Image:
+            source: "Images/jbonksicon.ico"
+            size_hint: .26,.26
+            pos_hint: {"center_x": .5, "center_y": .8}
+
+        MDLabel:
+            text: "Login"
+            font_size: "28sp"
+            font_name: "Fonts/DMSans-Bold.ttf"
+            color: 166/255, 19/255, 19/255, 1
+            pos_hint: {"center_x": .6, "center_y": .65}
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .50}
+            MDLabel:
+                text: "Username"
+                font_size: "14sp"
+                font_name: "Fonts/DMSans-Medium.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9}
+                color: 120/255, 120/255, 120/255, 1
+            TextInput:
+                size_hint_y: .75
+                font_name: "Fonts/DMSans-Medium.ttf"
+                pos_hint: {"center_x": .49, "center_y": .2}
+                background_color: 0, 0, 0, 0
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                foreground_color: 0,0,0,1
+                font_size: "13sp"
+                multiline: False
+            Image:
+                source: "Images/usericon.png"
+                pos_hint: {"center_x": .96, "center_y": .5}
+                size_hint: .5,.5
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": 0}
+                size_hint_y: .03
+                md_bg_color: 120/255, 120/255, 120/255, 1
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .40}
+            MDLabel:
+                text: "Password"
+                font_size: "14sp"
+                font_name: "Fonts/DMSans-Medium.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9}
+                color: 120/255, 120/255, 120/255, 1
+            TextInput:
+                size_hint_y: .75
+                font_name: "Fonts/DMSans-Medium.ttf"
+                pos_hint: {"center_x": .49, "center_y": .2}
+                background_color: 0, 0, 0, 0
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                foreground_color: 0,0,0,1
+                font_size: "13sp"
+                multiline: False
+                password: True
+            Image:
+                source: "Images/keyicon.png"
+                pos_hint: {"center_x": .96, "center_y": .5}
+                size_hint: .3,.3
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": 0}
+                size_hint_y: .03
+                md_bg_color: 120/255, 120/255, 120/255, 1
+
+        Button:
+            text: "Login"
+            background_color: 0,0,0,0
+            font_name: "Fonts/DMSans-Medium.ttf"
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .28}
+            canvas.before:
+                Color:
+                    rgb: 166/255, 19/255, 19/255, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [4]
+
+    MDTextButton:
+        text: "Sign Up"
+        font_size: "13sp"
+        pos_hint: {"center_x": .5, "center_y": .18}
+        halign: "center"
+        color: 166/255, 19/255, 19/255, 1
+
+    MDTextButton:
+        text: "Forget Password"
+        font_size: "13sp"
+        pos_hint: {"center_x": .5, "center_y": .12}
+        halign: "center"
+        color: 166/255, 19/255, 19/255, 1
+
+
+
+
+
+

@@ -1,0 +1,197 @@
+MDScreen:
+    name: "signup"
+    MDFloatLayout:
+        md_bg_color: 1,1,1,1
+        MDIconButton:
+            icon: "chevron-left"
+            user_font_size: "35sp"
+            pos_hint: {"center_y": .96}
+        MDLabel:
+            text: "Back"
+            font_size: "18sp"
+            font_name: "Arial"
+            pos_hint: {"center_x": .615, "center_y": .960}
+
+        MDLabel:
+            text: "Sign Up"
+            font_size: "28sp"
+            font_name: "Arial"
+            color: 212/255, 17/255, 12/255, 1
+            pos_hint: {"center_x": .87, "center_y": .92}
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .82}
+            MDLabel:
+                text: "First Name"
+                font_size: "14sp"
+                font_name: "Arial"
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                font_name: "Arial"
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 0,0,0,0
+                cursor_color: 0,0,0,1
+                cursor_width: "2sp"
+                font_size: "15sp"
+                multiline: False
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .20}
+                size_hint_y: .03
+                md_bg_color: 120/255,120/255,120/255,1
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .72}
+            MDLabel:
+                text: "Middle Name"
+                font_size: "14sp"
+                font_name: "Arial"
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                font_name: "Arial"
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 0,0,0,0
+                cursor_color: 0,0,0,1
+                cursor_width: "2sp"
+                font_size: "15sp"
+                multiline: False
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .20}
+                size_hint_y: .03
+                md_bg_color: 120/255,120/255,120/255,1
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .61}
+            MDLabel:
+                text: "Last Name"
+                font_size: "14sp"
+                font_name: "Arial"
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                font_name: "Arial"
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 0,0,0,0
+                cursor_color: 0,0,0,1
+                cursor_width: "2sp"
+                font_size: "15sp"
+                multiline: False
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .20}
+                size_hint_y: .03
+                md_bg_color: 120/255,120/255,120/255,1
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .50}
+            MDLabel:
+                text: "Address"
+                font_size: "14sp"
+                font_name: "Arial"
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                font_name: "Arial"
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 0,0,0,0
+                cursor_color: 0,0,0,1
+                cursor_width: "2sp"
+                font_size: "15sp"
+                multiline: False
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .20}
+                size_hint_y: .03
+                md_bg_color: 120/255,120/255,120/255,1
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .39}
+            MDLabel:
+                text: "Email Address"
+                font_size: "14sp"
+                font_name: "Arial"
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                font_name: "Arial"
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 0,0,0,0
+                cursor_color: 0,0,0,1
+                cursor_width: "2sp"
+                font_size: "15sp"
+                multiline: False
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .20}
+                size_hint_y: .03
+                md_bg_color: 120/255,120/255,120/255,1
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .28}
+            MDLabel:
+                text: "Contact Number"
+                font_size: "14sp"
+                font_name: "Arial"
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                font_name: "Arial"
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 0,0,0,0
+                cursor_color: 0,0,0,1
+                cursor_width: "2sp"
+                font_size: "15sp"
+                multiline: False
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .20}
+                size_hint_y: .03
+                md_bg_color: 120/255,120/255,120/255,1
+
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .17}
+            MDLabel:
+                text: "Password"
+                font_size: "14sp"
+                font_name: "Arial"
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                font_name: "Arial"
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 0,0,0,0
+                cursor_color: 0,0,0,1
+                cursor_width: "2sp"
+                font_size: "15sp"
+                multiline: False
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .20}
+                size_hint_y: .03
+                md_bg_color: 120/255,120/255,120/255,1
+
+        MDTextButton:
+            text: "sign up"
+            background_color: 0,0,0,0
+            font_name: "Arial"
+            halign: "center"
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .07}
+            canvas.before:
+                Color:
+                    rgb: 226/255, 0, 48/255, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [5]

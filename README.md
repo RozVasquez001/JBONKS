@@ -1,5 +1,4 @@
 # JBONKS
 ecommerce mobile application
 
-
-norien po ito
+JBONKS is an E-commerce mobile application

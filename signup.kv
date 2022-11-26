@@ -1,35 +1,27 @@
 MDScreen:
-    name: "signup"
-    MDFloatLayout:
+    name: "signup" #the name of the screen to be called
+    MDFloatLayout: #a group or component of the back button, labels
         md_bg_color: 1,1,1,1
-        MDIconButton:
-            icon: "chevron-left"
-            user_font_size: "35sp"
-            pos_hint: {"center_y": .96}
-        MDLabel:
-            text: "Back"
-            font_size: "18sp"
-            font_name: "Arial"
-            pos_hint: {"center_x": .615, "center_y": .960}
-
         MDLabel:
             text: "Sign Up"
             font_size: "28sp"
-            font_name: "Arial"
+            font_name: "fonts/DMSans-Bold.ttf"
             color: 212/255, 17/255, 12/255, 1
             pos_hint: {"center_x": .87, "center_y": .92}
 
         MDFloatLayout:
+            id:f_name
             size_hint: .79, .08
             pos_hint: {"center_x": .5, "center_y": .82}
             MDLabel:
                 text: "First Name"
-                font_size: "14sp"
-                font_name: "Arial"
+                font_size: "13sp"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .5, "center_y": .9}
             TextInput:
+                id:f_name
                 size_hint_y: .75
-                font_name: "Arial"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .49, "center_y": .4}
                 background_color: 0,0,0,0
                 cursor_color: 0,0,0,1
@@ -47,12 +39,13 @@ MDScreen:
             pos_hint: {"center_x": .5, "center_y": .72}
             MDLabel:
                 text: "Middle Name"
-                font_size: "14sp"
-                font_name: "Arial"
+                font_size: "13sp"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .5, "center_y": .9}
             TextInput:
+                id: mname
                 size_hint_y: .75
-                font_name: "Arial"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .49, "center_y": .4}
                 background_color: 0,0,0,0
                 cursor_color: 0,0,0,1
@@ -70,12 +63,13 @@ MDScreen:
             pos_hint: {"center_x": .5, "center_y": .61}
             MDLabel:
                 text: "Last Name"
-                font_size: "14sp"
-                font_name: "Arial"
+                font_size: "13sp"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .5, "center_y": .9}
             TextInput:
+                id: lname
                 size_hint_y: .75
-                font_name: "Arial"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .49, "center_y": .4}
                 background_color: 0,0,0,0
                 cursor_color: 0,0,0,1
@@ -93,12 +87,13 @@ MDScreen:
             pos_hint: {"center_x": .5, "center_y": .50}
             MDLabel:
                 text: "Address"
-                font_size: "14sp"
-                font_name: "Arial"
+                font_size: "13sp"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .5, "center_y": .9}
             TextInput:
+                id: Addrs
                 size_hint_y: .75
-                font_name: "Arial"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .49, "center_y": .4}
                 background_color: 0,0,0,0
                 cursor_color: 0,0,0,1
@@ -116,12 +111,13 @@ MDScreen:
             pos_hint: {"center_x": .5, "center_y": .39}
             MDLabel:
                 text: "Email Address"
-                font_size: "14sp"
-                font_name: "Arial"
+                font_size: "13sp"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .5, "center_y": .9}
             TextInput:
+                id: emailAdd
                 size_hint_y: .75
-                font_name: "Arial"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .49, "center_y": .4}
                 background_color: 0,0,0,0
                 cursor_color: 0,0,0,1
@@ -139,12 +135,13 @@ MDScreen:
             pos_hint: {"center_x": .5, "center_y": .28}
             MDLabel:
                 text: "Contact Number"
-                font_size: "14sp"
-                font_name: "Arial"
+                font_size: "13sp"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .5, "center_y": .9}
             TextInput:
+                id: contacts
                 size_hint_y: .75
-                font_name: "Arial"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .49, "center_y": .4}
                 background_color: 0,0,0,0
                 cursor_color: 0,0,0,1
@@ -163,12 +160,13 @@ MDScreen:
             pos_hint: {"center_x": .5, "center_y": .17}
             MDLabel:
                 text: "Password"
-                font_size: "14sp"
-                font_name: "Arial"
+                font_size: "13sp"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .5, "center_y": .9}
             TextInput:
+                id: passw
                 size_hint_y: .75
-                font_name: "Arial"
+                font_name: "fonts/DMSans-Medium.ttf"
                 pos_hint: {"center_x": .49, "center_y": .4}
                 background_color: 0,0,0,0
                 cursor_color: 0,0,0,1
@@ -180,18 +178,26 @@ MDScreen:
                 pos_hint: {"center_x": .5, "center_y": .20}
                 size_hint_y: .03
                 md_bg_color: 120/255,120/255,120/255,1
+        MDTextButton:
+            text: "Back"
+            font_name: "fonts/DMSans-Medium.ttf"
+            font_size: "15sp"
+            pos_hint: {"center_x": .10, "center_y": .960}
+            color: 166/255, 19/255, 19/255, 1
+            on_press: app.root.current = 'login'
 
         MDTextButton:
-            text: "sign up"
+            text: "Sign Up"
             background_color: 0,0,0,0
-            font_name: "Arial"
+            font_name: "fonts/DMSans-Bold.ttf"
             halign: "center"
             size_hint: .79, .08
             pos_hint: {"center_x": .5, "center_y": .07}
+            on_press: app.signup()
             canvas.before:
                 Color:
                     rgb: 226/255, 0, 48/255, 1
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
-                    radius: [5]
+                    radius: [25]

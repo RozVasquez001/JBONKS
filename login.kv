@@ -2,16 +2,6 @@ MDScreen:
     name: "login"
     MDFloatLayout:
         md_bg_color: 1,1,1,1
-        MDIconButton:
-            icon: "chevron-left"
-            user_font_size: "30sp"
-            pos_hint: {"center_y": .95}
-        MDLabel:
-            text: "Back"
-            font_size: "18sp"
-            font_name: "Fonts/DMSans-Regular.ttf"
-            pos_hint: {"center_x": .615, "center_y": .949}
-            color: 166/255, 19/255, 19/255, 1
         Image:
             source: "Images/jbonksicon.ico"
             size_hint: .26,.26
@@ -42,10 +32,7 @@ MDScreen:
                 foreground_color: 0,0,0,1
                 font_size: "13sp"
                 multiline: False
-            Image:
-                source: "Images/usericon.png"
-                pos_hint: {"center_x": .96, "center_y": .5}
-                size_hint: .5,.5
+
             MDFloatLayout:
                 pos_hint: {"center_x": .5, "center_y": 0}
                 size_hint_y: .03
@@ -70,10 +57,6 @@ MDScreen:
                 font_size: "13sp"
                 multiline: False
                 password: True
-            Image:
-                source: "Images/keyicon.png"
-                pos_hint: {"center_x": .96, "center_y": .5}
-                size_hint: .3,.3
             MDFloatLayout:
                 pos_hint: {"center_x": .5, "center_y": 0}
                 size_hint_y: .03
@@ -82,16 +65,17 @@ MDScreen:
         Button:
             text: "Login"
             background_color: 0,0,0,0
-            font_name: "Fonts/DMSans-Medium.ttf"
+            font_name: "Fonts/DMSans-Bold.ttf"
             size_hint: .79, .08
             pos_hint: {"center_x": .5, "center_y": .28}
+            on_press: app.root.current = 'home'
             canvas.before:
                 Color:
                     rgb: 166/255, 19/255, 19/255, 1
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
-                    radius: [4]
+                    radius: [25]
 
     MDTextButton:
         text: "Sign Up"
@@ -99,6 +83,7 @@ MDScreen:
         pos_hint: {"center_x": .5, "center_y": .18}
         halign: "center"
         color: 166/255, 19/255, 19/255, 1
+        on_press: app.root.current = 'signup'
 
     MDTextButton:
         text: "Forget Password"

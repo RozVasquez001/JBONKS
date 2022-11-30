@@ -2,4 +2,10 @@
 
 JBONKS is an E-commerce mobile application
 
+Team Members:
 
+MC BEN PRECILLA
+ROZ VASQUEZ
+NORIEN IBIAS
+ALEXANDRA MONTEAGUDO
+HYRUM BRAVO

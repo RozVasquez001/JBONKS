@@ -1,16 +1,85 @@
-import { View, Text, Pressable, ImageBackground } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  ImageBackground,
+  BackHandler,
+  Keyboard,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import { AntDesign } from "@expo/vector-icons";
 import AuthTextInput from "../components/AuthTextInput";
 import AuthButton from "../components/AuthButton";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
+import { Toast } from "react-native-toast-message/lib/src/Toast";
+import Loading from "../components/Loading";
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState();
   const [pass, setPass] = useState();
+  const [loading, setLoading] = useState();
+
+  useEffect(() => {
+    // onAuthStateChanged(auth, () => {
+    //   if (auth.currentUser) {
+    //     navigation.replace("DrawerTab");
+    //   }
+    // });
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      () => true
+    );
+    return () => backHandler.remove();
+  });
+
+  const handleError = () => {
+    const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (email === "" || email === undefined) {
+      return "Please input your email.";
+    } else if (!reg.test(email)) {
+      return "Please input a proper email address";
+    } else if (pass === "" || pass === undefined) {
+      return "Password is empty";
+    } else {
+      return false;
+    }
+  };
+
+  const handleSignIn = () => {
+    Keyboard.dismiss();
+
+    handleError();
+    const result = handleError();
+
+    if (result !== false) {
+      showErrorToast(result);
+    } else {
+      setLoading(true);
+      signInWithEmailAndPassword(auth, email, pass)
+        .then(() => {
+          navigation.replace("DrawerTab");
+          setLoading(false);
+        })
+        .catch((error) => {
+          showErrorToast(error.code);
+          setLoading(false);
+        });
+    }
+  };
+
+  const showErrorToast = (text) => {
+    Toast.show({
+      type: "error",
+      text1: text,
+    });
+  };
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
+      {loading && <Loading />}
       <ImageBackground
         source={require("../assets/jbonkslogo.png")}
         resizeMode="contain"
@@ -56,7 +125,7 @@ export default function Login({ navigation }) {
               Forget Password?
             </Text>
           </Pressable>
-          <AuthButton text="LOGIN" />
+          <AuthButton text="LOGIN" handlePress={handleSignIn} />
           <Text style={{ color: "gray", marginVertical: 10 }}>or</Text>
           <AuthButton
             text="SIGNUP"

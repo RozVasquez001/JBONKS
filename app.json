@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "jbonks",
+    "name": "Jbonks",
     "slug": "jbonks",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/jbonkslogo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/jbonkslogo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#CC0000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,12 +22,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/jbonkslogo.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.sowishi.jbonks"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b2294111-b215-4042-a305-bbc91894051c"
+      }
     }
   }
 }

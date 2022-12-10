@@ -9,6 +9,7 @@ export default function AuthTextInput({
   style,
   type,
   onChange,
+  onFocus,
 }) {
   return (
     <View
@@ -32,6 +33,7 @@ export default function AuthTextInput({
         style={{ marginLeft: 5 }}
       />
       <TextInput
+        onFocus={onFocus}
         onChangeText={onChange}
         textContentType={type}
         secureTextEntry={secured}

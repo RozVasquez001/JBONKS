@@ -6,3 +6,6 @@ TEAM 5 - JBONKS
 Front-End: Norien Ibias, Roz Vasquez
 Back-End: Ben Precilla, Hyrum Bravo
 QA / Front-End: Alexandra Monteagudo 
+
+
+Language Used: React-Native & Firebase

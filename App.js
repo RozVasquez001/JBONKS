@@ -73,13 +73,6 @@ export default function App() {
     )
   }
 
-  const AdminTab = () => {
-    return(
-      <Admin.Navigator screenOptions={{headerShown: false}}>
-         <Admin.Screen name="Sell" component={Sell}/>
-      </Admin.Navigator>
-    )
-  }
 
   return (
     <>
@@ -87,13 +80,14 @@ export default function App() {
         
         <Stack.Navigator screenOptions={{ headerShown: false}}>
           <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Sell" component={Sell} />
+
           <Stack.Screen name="Signup" component={Signup} />
           <Stack.Screen name="DrawerTab" component={DrawerTab} />
           <Stack.Screen name="User" component={User} />
           <Stack.Screen name="ViewItem" component={ViewItem} />
           <Stack.Screen name="OrderConfirmed" component={OrderConfirmed} />
 
-          <Stack.Screen name="AdminTab" component={AdminTab} />
           <Stack.Screen options={{headerShown : true, title: "Order Details"}} name="Checkout" component={Checkout} />
 
           <Stack.Screen  options={{headerShown : true}} name="Search" component={Search} />

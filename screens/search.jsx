@@ -105,7 +105,7 @@ export default function Search({ navigation }) {
             borderWidth: 1,
             backgroundColor: "white",
           }}
-          placeHolder="Username"
+          placeHolder="Search Product"
           entypoIconName="magnifying-glass"
           secured={false}
         />

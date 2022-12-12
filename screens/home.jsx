@@ -126,7 +126,7 @@ export default function Home({ navigation }) {
           }}
         >
           <TouchableOpacity
-            onPress={() => navigation.navigate("AdminTab")}
+            onPress={() => navigation.navigate("Sell")}
             style={{
               backgroundColor: "#CC0000",
               padding: 5,
